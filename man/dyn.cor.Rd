@@ -14,19 +14,24 @@
 }
 \usage{
 dyn.cor(x, lambda, verbose=TRUE)
-dyn.cov(x, lambda, verbose=TRUE)
+dyn.cov(x, lambda, lambda.var, verbose=TRUE)
 dyn.invcor(x, lambda, verbose=TRUE)
-dyn.invcov(x, lambda, verbose=TRUE)
+dyn.invcov(x, lambda, lambda.var, verbose=TRUE)
 dyn.pcor(x, lambda, verbose=TRUE)
-dyn.pcov(x, lambda, verbose=TRUE)
+dyn.pcov(x, lambda, lambda.var, verbose=TRUE)
 }
 \arguments{
   \item{x}{a data matrix}
-  \item{lambda}{the shrinkage intensity (range 0-1) employed for computing the underlying
-  correlation matrix. If \eqn{\lambda} is is not specified (the default)
-        a suitable value is automatically chosen - see \code{\link[corpcor]{cor.shrink}}.  
-	 For \eqn{\lambda=0} no shrinkage occurs
-	 and the empirical estimates are computed.}
+  \item{lambda}{the correlation shrinkage intensity (range 0-1). If \code{lambda} is not specified 
+	 (the default) it is estimated using an analytic formula from Schaefer 
+	 and Strimmer (2005)and Opgen-Rhein and Strimmer (2006).
+	  For \code{lambda=0} the empirical correlations are recovered.
+	  See also \code{\link[corpcor]{cor.shrink}}.}
+  \item{lambda.var}{the variance shrinkage intensity (range 0-1). If \code{lambda.var} is not specified 
+	 (the default) it is estimated using an analytic formula from Schaefer 
+	 and Strimmer (2005) and Opgen-Rhein and Strimmer (2006).
+	  For \code{lambda.var=0} the empirical variances are recovered.
+	  See also \code{\link[corpcor]{var.shrink}}.}  
   \item{verbose}{report progress while computing (default: TRUE)}
 }
 \details{
