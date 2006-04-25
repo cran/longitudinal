@@ -1,4 +1,4 @@
-### dyn.scale.R  (2006-03-10)
+### dyn.scale.R  (2006-04-25)
 ###
 ###    Dynamical Scale, Moments, and Weights
 ###
@@ -30,14 +30,14 @@ dyn.moments <- function(x)
 {
   w <- dyn.weights(x)
   
-  return( weighted.moments(x, w) )
+  return( wt.moments(x, w) )
 }
 
 # scale longitudinal data matrix
-dyn.scale <- function(x, center=TRUE, scale=TRUE)
+dyn.scale <- function(x, center=TRUE, scale=TRUE, scale.by=c("sd", "mean"))
 {
   w <- fda.weights(x)
-  x <- weighted.scale(x, w, center, scale)
+  x <- wt.scale(x, w, center, scale, scale.by)
 
   return( x )
 }

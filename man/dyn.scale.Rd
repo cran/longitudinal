@@ -16,13 +16,14 @@
         a \code{\link{longitudinal}} object.
   
   \code{dyn.scale} centers and standardizes a \code{\link{longitudinal}} matrix.
+  
  }
 
 \usage{
   time2weights(t)
   dyn.weights(x)
   dyn.moments(x)
-  dyn.scale(x, center=TRUE, scale=TRUE)
+  dyn.scale(x, center=TRUE, scale=TRUE, scale.by = c("sd", "mean"))
 }
 
 \arguments{
@@ -30,6 +31,10 @@
   \item{x}{a \code{\link{longitudinal}} object, or a matrix}
   \item{center}{logical value}
   \item{scale}{logical value}
+   \item{scale.by}{determines whether the columns are standardized by the
+        standard errors of the respective variables (\code{"sd"}, the default) or by the
+	column means (\code{"mean"}).}
+
 }
 
 

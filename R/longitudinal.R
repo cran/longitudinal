@@ -67,7 +67,7 @@ as.longitudinal <- function(x, repeats=1, time)
     stop("entries time vector must be monotonically increasing")
   
  
-  # construct logitudinal object
+  # construct longitudinal object
   attr(x, "class") <- "longitudinal"
   attr(x, "time") <- time
   attr(x, "repeats") <- repeats
