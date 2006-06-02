@@ -22,7 +22,7 @@ plot.longitudinal(x, series=1, type=c("median", "mean"), autolayout=TRUE, \ldots
   
   \item{repeats}{Integer, or a vector of integers, that specifies the number
                  of available measurements per time point.  If only one number is given
-		 then it is assumed the time series is regularily sampled. If instead a vector
+		 then it is assumed the time series is regularly sampled. If instead a vector
 		 is specified, then each time point may have a different number of samples.}  
 
   \item{time}{A vector with the dates for the time points. If not specified,
@@ -52,7 +52,7 @@ plot.longitudinal(x, series=1, type=c("median", "mean"), autolayout=TRUE, \ldots
   The dates for the time points can be specified with the argument \code{times} and need not
   be equally spaced.  With the argument \code{repeats} it is possible to specify the number
   of measurements per time point (this may be different from time point to time point).  In the resulting
-  \code{longitudinal} matrix object the rownames will indicate both the time points and the 
+  \code{longitudinal} matrix object the row names will indicate both the time points and the 
   repetition number (e.g., "10-1", "10-2", "10-3", \ldots,  "20-1", "20-2", "20-3", etc.).
   
   \code{is.longitudinal} checks whether a matrix has the \code{longitudinal} attributes.
@@ -71,7 +71,7 @@ plot.longitudinal(x, series=1, type=c("median", "mean"), autolayout=TRUE, \ldots
 
 
 \author{
-  Korbinian Strimmer (\url{http://www.statistik.lmu.de/~strimmer/}).
+  Korbinian Strimmer (\url{http://strimmerlab.org}).
 }
 \seealso{\code{\link{longitudinal.util}}, \code{\link{tcell}}, \code{\link{ts}}.}
 

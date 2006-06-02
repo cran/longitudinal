@@ -1,4 +1,4 @@
-### dyn.cor.R  (2006-03-28)
+### dyn.cor.R  (2006-06-02)
 ###
 ###    Dynamical Correlation and Covariance
 ###
@@ -28,74 +28,91 @@
 ######  correlation related ######
 
 # dynamical correlation
-dyn.cor <- function(x, lambda, verbose=TRUE)
+dyn.cor <- function(x, lambda, protect=0.01, verbose=TRUE)
 {
   w <- dyn.weights(x)
   
   # weighted covariance
-  c <- cor.shrink(x, lambda=lambda, w=w, verbose=verbose)
-
-  return( c )
-}
-
-# dynamical partial correlation
-dyn.pcor <- function(x, lambda, verbose=TRUE)
-{
-  w <- dyn.weights(x)
-  
-  # weighted covariance
-  c <- pcor.shrink(x, lambda=lambda, w=w, verbose=verbose)
+  c <- cor.shrink(x, lambda=lambda, w=w, protect=protect, verbose=verbose)
 
   return( c )
 }
 
 # dynamical inverse correlation
-dyn.invcor <- function(x, lambda, verbose=TRUE)
+dyn.invcor <- function(x, lambda, protect=0.01, verbose=TRUE)
 {
   w <- dyn.weights(x)
   
   # weighted covariance
-  c <- invcor.shrink(x, lambda=lambda, w=w, verbose=verbose)
+  c <- invcor.shrink(x, lambda=lambda, w=w, protect=protect, verbose=verbose)
 
   return( c )
 }
+
+# dynamical partial correlation
+dyn.pcor <- function(x, lambda, protect=0.01, verbose=TRUE)
+{
+  w <- dyn.weights(x)
+  
+  # weighted covariance
+  c <- pcor.shrink(x, lambda=lambda, w=w, protect=protect, verbose=verbose)
+
+  return( c )
+}
+
 
 
 ######  covariance related ######
 
 # dynamical covariance
-dyn.cov <- function(x, lambda, lambda.var, verbose=TRUE)
+dyn.cov <- function(x, lambda, lambda.var, protect=0.01, verbose=TRUE)
 {
   w <- dyn.weights(x)
   
   # weighted covariance
   c <- cov.shrink(x, lambda=lambda, lambda.var=lambda.var,
-         w=w, verbose=verbose)
+         w=w, protect=protect, verbose=verbose)
 
   return( c )
 }
 
-# dynamical partial covariance
-dyn.pcov <- function(x, lambda, lambda.var, verbose=TRUE)
-{
-  w <- dyn.weights(x)
-  
-  # weighted covariance
-  c <- pcov.shrink(x, lambda=lambda, lambda.var=lambda.var, 
-          w=w, verbose=verbose)
-
-  return( c )
-}
 
 # dynamical inverse covariance
-dyn.invcov <- function(x, lambda, lambda.var, verbose=TRUE)
+dyn.invcov <- function(x, lambda, lambda.var, protect=0.01, verbose=TRUE)
 {
   w <- dyn.weights(x)
   
   # weighted covariance
   c <- invcov.shrink(x, lambda=lambda, lambda.var=lambda.var, 
-         w=w, verbose=verbose)
+         w=w, protect=protect, verbose=verbose)
 
   return( c )
 }
+
+
+# dynamical variance
+dyn.var <- function(x, lambda.var, verbose=TRUE)
+{
+  w <- dyn.weights(x)
+  
+  # weighted covariance
+  sv <- var.shrink(x, lambda.var=lambda.var, 
+          w=w, verbose=verbose)
+
+  return( sv )
+}
+
+
+# dynamical partial variance
+dyn.pvar <- function(x, lambda, lambda.var, protect=0.01, verbose=TRUE)
+{
+  w <- dyn.weights(x)
+  
+  # weighted covariance
+  pv <- pvar.shrink(x, lambda=lambda, lambda.var=lambda.var, 
+          w=w, protect=protect, verbose=verbose)
+
+  return( pv )
+}
+
 

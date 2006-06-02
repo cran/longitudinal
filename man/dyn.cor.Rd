@@ -3,22 +3,24 @@
 \alias{dyn.pcor}
 \alias{dyn.invcor}
 \alias{dyn.cov}
-\alias{dyn.pcov}
+\alias{dyn.pvar}
+\alias{dyn.var}
 \alias{dyn.invcov}
 
 
 \title{Dynamical Correlation and Covariance}
 \description{
-  The functions estimate the dynamical correlation and covariance, and
+  The functions estimate dynamical correlation and covariance, and
   related quantities.  
 }
 \usage{
-dyn.cor(x, lambda, verbose=TRUE)
-dyn.cov(x, lambda, lambda.var, verbose=TRUE)
-dyn.invcor(x, lambda, verbose=TRUE)
-dyn.invcov(x, lambda, lambda.var, verbose=TRUE)
-dyn.pcor(x, lambda, verbose=TRUE)
-dyn.pcov(x, lambda, lambda.var, verbose=TRUE)
+dyn.cor(x, lambda, protect=0.01, verbose=TRUE)
+dyn.var(x, lambda.var, verbose=TRUE)
+dyn.cov(x, lambda, lambda.var, protect=0.01, verbose=TRUE)
+dyn.invcor(x, lambda, protect=0.01, verbose=TRUE)
+dyn.invcov(x, lambda, lambda.var, protect=0.01, verbose=TRUE)
+dyn.pvar(x, lambda, lambda.var, protect=0.01, verbose=TRUE)
+dyn.pcor(x, lambda, protect=0.01, verbose=TRUE)
 }
 \arguments{
   \item{x}{a data matrix}
@@ -32,6 +34,8 @@ dyn.pcov(x, lambda, lambda.var, verbose=TRUE)
 	 and Strimmer (2005) and Opgen-Rhein and Strimmer (2006).
 	  For \code{lambda.var=0} the empirical variances are recovered.
 	  See also \code{\link[corpcor]{var.shrink}}.}  
+  \item{protect}{the fraction of correlation components protected against excessive individual 
+                 component risk (default: 0.01)}	     
   \item{verbose}{report progress while computing (default: TRUE)}
 }
 \details{
@@ -39,7 +43,7 @@ dyn.pcov(x, lambda, lambda.var, verbose=TRUE)
    follow the definition of Opgen-Rhein and K. Strimmer (2006a,b).
    This approach derives from a FDA perspective. Essentially, it takes account 
    of the distances between the various time points by introducing weights.
-   If these weights are all equal the usual estimators are obtained.
+   If these weights are all equal the usual iid estimators are obtained.
   
    For details about the analytic shrinkage procedure consult 
    Opgen-Rhein and K. Strimmer (2006b) and  Schaefer and Strimmer (2005)
@@ -49,17 +53,18 @@ dyn.pcov(x, lambda, lambda.var, verbose=TRUE)
 \value{
 
   \code{dyn.cor} returns the dynamical correlation matrix.
+  \code{dyn.var} returns the vector of dynamical variances.
   \code{dyn.cov} returns the dynamical covariance matrix. 
 
   \code{dyn.invcor} returns the inverse dynamical correlation matrix.
   \code{dyn.invcov} returns the inverse dynamical covariance matrix. 
 
-  \code{dyn.pcor} returns the partial dynamical correlation matrix.
-  \code{dyn.pcov} returns the partial dynamical covariance matrix.  
+  \code{dyn.pvar} returns the vector of partial dynamical variances.
+  \code{dyn.pcor} returns the partial dynamical correlation matrix.  
 }
 \author{
-  Rainer Opgen-Rhein (\url{http://www.statistik.lmu.de/~opgen/}) and
-  Korbinian Strimmer (\url{http://www.statistik.lmu.de/~strimmer/}).
+  Rainer Opgen-Rhein (\url{http://opgen-rhein.de}) and
+  Korbinian Strimmer (\url{http://www.strimmerlab.org}).
 }
 \references{
 
@@ -78,7 +83,7 @@ dyn.pcov(x, lambda, lambda.var, verbose=TRUE)
  Statist. Appl. Genet. Mol. Biol. \bold{4}:32.
  (\url{http://www.bepress.com/sagmb/vol4/iss1/art32/})  
 }
-\seealso{\code{{dyn.weights}}, \code{\link[corpcor]{cov.shrink}}}
+\seealso{\code{\link{dyn.weights}}, \code{\link[corpcor]{cov.shrink}}, \code{\link[corpcor]{pcor.shrink}}}
 
 \examples{
 # load "longitudinal" library
@@ -90,7 +95,7 @@ get.time.repeats(tcell.34)
 
 
 # dynamical partial correlation 
-# (this takes into account the unequally distant time points) 
+# (this takes into account of the unequal spacings between time points) 
 dynpc <- dyn.pcor(tcell.34, lambda=0)
 
 # static partial correlation

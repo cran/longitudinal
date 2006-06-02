@@ -1,6 +1,6 @@
 
 
-### longitudinal.util.R  (2005-05-06)
+### longitudinal.util.R  (2005-05-07)
 ###
 ###    Utility functions for longitudinal data
 ###
@@ -149,7 +149,7 @@ is.equally.spaced <- function(x)
 }
 
 
-is.regularily.sampled <- function(x)
+is.regularly.sampled <- function(x)
 {
   if (!is.longitudinal(x))
     stop("argument is not a longitudinal object")

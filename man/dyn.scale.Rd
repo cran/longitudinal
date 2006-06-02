@@ -52,8 +52,8 @@
 
 
 \author{
-  Rainer Opgen-Rhein (\url{http://www.statistik.lmu.de/~opgen/}) and
-  Korbinian Strimmer (\url{http://www.statistik.lmu.de/~strimmer/}).
+  Rainer Opgen-Rhein (\url{http://opgen-rhein.de}) and
+  Korbinian Strimmer (\url{http://strimmerlab.org}).
 }
 
 \references{

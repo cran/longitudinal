@@ -3,7 +3,7 @@
 
 \alias{get.time.repeats}
 \alias{is.equally.spaced}
-\alias{is.regularily.sampled}
+\alias{is.regularly.sampled}
 \alias{has.repeated.measurements}
 \alias{combine.longitudinal}
 \alias{condense.longitudinal}
@@ -13,7 +13,7 @@
 \usage{
 get.time.repeats(x)
 is.equally.spaced(x)
-is.regularily.sampled(x)
+is.regularly.sampled(x)
 has.repeated.measurements(x)
 combine.longitudinal(x1, x2)
 condense.longitudinal(x, s, func=median)
@@ -37,7 +37,7 @@ condense.longitudinal(x, s, func=median)
   \code{is.equally.spaced} checks whether the distances between subsequent time points
   are all equal.   
   
-  \code{is.regularily.sampled} checks whether the number of measurements are identical
+  \code{is.regularly.sampled} checks whether the number of measurements are identical
   across time points.   
  
   \code{has.repeated.measurements} checks whether any time point as been measured more
@@ -55,7 +55,7 @@ condense.longitudinal(x, s, func=median)
 
   \code{get.time.repeats} returns a list containing two vectors (\code{time} and \code{repeats}).
   
-  \code{is.equally.spaced}, \code{is.regularily.sampled}, and \code{has.repeated.measurements}
+  \code{is.equally.spaced}, \code{is.regularly.sampled}, and \code{has.repeated.measurements}
   return either TRUE or FALSE.
   
   \code{combine.longitudinal} returns a \code{\link{longitudinal}} object.
@@ -65,7 +65,7 @@ condense.longitudinal(x, s, func=median)
 
 
 \author{
-  Korbinian Strimmer (\url{http://www.statistik.lmu.de/~strimmer/}).
+  Korbinian Strimmer (\url{http://strimmerlab.org}).
 }
 \seealso{\code{\link{longitudinal}}, \code{\link{tcell}}.}
 
@@ -83,7 +83,7 @@ summary(tcell.34)
 # information
 get.time.repeats(tcell.34)
 is.equally.spaced(tcell.34)
-is.regularily.sampled(tcell.34)
+is.regularly.sampled(tcell.34)
 has.repeated.measurements(tcell.34)
 
 # compute the mean value at each time point for the first two gene
