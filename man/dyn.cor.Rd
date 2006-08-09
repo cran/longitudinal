@@ -14,13 +14,13 @@
   related quantities.  
 }
 \usage{
-dyn.cor(x, lambda, protect=0.01, verbose=TRUE)
-dyn.var(x, lambda.var, verbose=TRUE)
-dyn.cov(x, lambda, lambda.var, protect=0.01, verbose=TRUE)
-dyn.invcor(x, lambda, protect=0.01, verbose=TRUE)
-dyn.invcov(x, lambda, lambda.var, protect=0.01, verbose=TRUE)
-dyn.pvar(x, lambda, lambda.var, protect=0.01, verbose=TRUE)
-dyn.pcor(x, lambda, protect=0.01, verbose=TRUE)
+dyn.cor(x, lambda, protect=0, verbose=TRUE)
+dyn.var(x, lambda.var, protect=0, verbose=TRUE)
+dyn.cov(x, lambda, lambda.var, protect=0, verbose=TRUE)
+dyn.invcor(x, lambda, protect=0, verbose=TRUE)
+dyn.invcov(x, lambda, lambda.var, protect=0, verbose=TRUE)
+dyn.pvar(x, lambda, lambda.var, protect=0, verbose=TRUE)
+dyn.pcor(x, lambda, protect=0, verbose=TRUE)
 }
 \arguments{
   \item{x}{a data matrix}

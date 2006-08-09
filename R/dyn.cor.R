@@ -1,4 +1,4 @@
-### dyn.cor.R  (2006-06-02)
+### dyn.cor.R  (2006-08-09)
 ###
 ###    Dynamical Correlation and Covariance
 ###
@@ -28,7 +28,7 @@
 ######  correlation related ######
 
 # dynamical correlation
-dyn.cor <- function(x, lambda, protect=0.01, verbose=TRUE)
+dyn.cor <- function(x, lambda, protect=0, verbose=TRUE)
 {
   w <- dyn.weights(x)
   
@@ -39,7 +39,7 @@ dyn.cor <- function(x, lambda, protect=0.01, verbose=TRUE)
 }
 
 # dynamical inverse correlation
-dyn.invcor <- function(x, lambda, protect=0.01, verbose=TRUE)
+dyn.invcor <- function(x, lambda, protect=0, verbose=TRUE)
 {
   w <- dyn.weights(x)
   
@@ -50,7 +50,7 @@ dyn.invcor <- function(x, lambda, protect=0.01, verbose=TRUE)
 }
 
 # dynamical partial correlation
-dyn.pcor <- function(x, lambda, protect=0.01, verbose=TRUE)
+dyn.pcor <- function(x, lambda, protect=0, verbose=TRUE)
 {
   w <- dyn.weights(x)
   
@@ -65,7 +65,7 @@ dyn.pcor <- function(x, lambda, protect=0.01, verbose=TRUE)
 ######  covariance related ######
 
 # dynamical covariance
-dyn.cov <- function(x, lambda, lambda.var, protect=0.01, verbose=TRUE)
+dyn.cov <- function(x, lambda, lambda.var, protect=0, verbose=TRUE)
 {
   w <- dyn.weights(x)
   
@@ -78,7 +78,7 @@ dyn.cov <- function(x, lambda, lambda.var, protect=0.01, verbose=TRUE)
 
 
 # dynamical inverse covariance
-dyn.invcov <- function(x, lambda, lambda.var, protect=0.01, verbose=TRUE)
+dyn.invcov <- function(x, lambda, lambda.var, protect=0, verbose=TRUE)
 {
   w <- dyn.weights(x)
   
@@ -91,20 +91,20 @@ dyn.invcov <- function(x, lambda, lambda.var, protect=0.01, verbose=TRUE)
 
 
 # dynamical variance
-dyn.var <- function(x, lambda.var, verbose=TRUE)
+dyn.var <- function(x, lambda.var, protect=0, verbose=TRUE)
 {
   w <- dyn.weights(x)
   
   # weighted covariance
   sv <- var.shrink(x, lambda.var=lambda.var, 
-          w=w, verbose=verbose)
+          w=w, protect=protect, verbose=verbose)
 
   return( sv )
 }
 
 
 # dynamical partial variance
-dyn.pvar <- function(x, lambda, lambda.var, protect=0.01, verbose=TRUE)
+dyn.pvar <- function(x, lambda, lambda.var, protect=0, verbose=TRUE)
 {
   w <- dyn.weights(x)
   

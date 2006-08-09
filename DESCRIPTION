@@ -1,6 +1,6 @@
 Package: longitudinal
-Version: 1.1.2
-Date: 2006-06-02
+Version: 1.1.3
+Date: 2006-08-09
 Title: Analysis of Multiple Time Course Data
 Author: Rainer Opgen-Rhein and Korbinian Strimmer.
 Maintainer: Korbinian Strimmer <korbinian.strimmer@lmu.de>
@@ -12,5 +12,5 @@ Description: This package contains general data structures and
   It also implements a shrinkage estimator of dynamical correlation
   and dynamical covariance.
 License: GPL version 2 or newer
-URL: http://www.statistik.lmu.de/~strimmer/software/longitudinal/
-Packaged: Mon Jun  5 17:16:56 2006; strimmer
+URL: http://www.strimmerlab.org/software/longitudinal/
+Packaged: Wed Aug  9 14:05:19 2006; strimmer
