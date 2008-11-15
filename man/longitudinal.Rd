@@ -11,9 +11,9 @@
 \usage{
 as.longitudinal(x, repeats=1, time)
 is.longitudinal(x)
-summary.longitudinal(object, \ldots)
-print.longitudinal(x, \ldots)
-plot.longitudinal(x, series=1, type=c("median", "mean"), autolayout=TRUE, \ldots)
+\method{summary}{longitudinal}(object, \ldots)
+\method{print}{longitudinal}(x, \ldots)
+\method{plot}{longitudinal}(x, series=1, type=c("median", "mean"), autolayout=TRUE, \ldots)
 }
 \arguments{
   \item{x, object}{Time series data, contained in a \code{longitudinal} object

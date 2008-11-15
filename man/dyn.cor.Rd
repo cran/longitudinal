@@ -14,39 +14,37 @@
   related quantities.  
 }
 \usage{
-dyn.cor(x, lambda, protect=0, verbose=TRUE)
-dyn.var(x, lambda.var, protect=0, verbose=TRUE)
-dyn.cov(x, lambda, lambda.var, protect=0, verbose=TRUE)
-dyn.invcor(x, lambda, protect=0, verbose=TRUE)
-dyn.invcov(x, lambda, lambda.var, protect=0, verbose=TRUE)
-dyn.pvar(x, lambda, lambda.var, protect=0, verbose=TRUE)
-dyn.pcor(x, lambda, protect=0, verbose=TRUE)
+dyn.cor(x, lambda, verbose=TRUE)
+dyn.var(x, lambda.var, verbose=TRUE)
+dyn.cov(x, lambda, lambda.var, verbose=TRUE)
+dyn.invcor(x, lambda, verbose=TRUE)
+dyn.invcov(x, lambda, lambda.var, verbose=TRUE)
+dyn.pvar(x, lambda, lambda.var, verbose=TRUE)
+dyn.pcor(x, lambda, verbose=TRUE)
 }
 \arguments{
   \item{x}{a data matrix}
   \item{lambda}{the correlation shrinkage intensity (range 0-1). If \code{lambda} is not specified 
-	 (the default) it is estimated using an analytic formula from Schaefer 
-	 and Strimmer (2005)and Opgen-Rhein and Strimmer (2006).
+	 (the default) it is estimated using an analytic formula from Sch\"afer 
+	 and Strimmer (2005) and Opgen-Rhein and Strimmer (2006a,b).
 	  For \code{lambda=0} the empirical correlations are recovered.
 	  See also \code{\link[corpcor]{cor.shrink}}.}
   \item{lambda.var}{the variance shrinkage intensity (range 0-1). If \code{lambda.var} is not specified 
-	 (the default) it is estimated using an analytic formula from Schaefer 
-	 and Strimmer (2005) and Opgen-Rhein and Strimmer (2006).
+	 (the default) it is estimated using an analytic formula from Sch\"afer 
+	 and Strimmer (2005) and Opgen-Rhein and Strimmer (2006a,b).
 	  For \code{lambda.var=0} the empirical variances are recovered.
 	  See also \code{\link[corpcor]{var.shrink}}.}  
-  \item{protect}{the fraction of correlation components protected against excessive individual 
-                 component risk (default: 0.01)}	     
   \item{verbose}{report progress while computing (default: TRUE)}
 }
 \details{
    The dynamical correlation and related quantities implemented here
-   follow the definition of Opgen-Rhein and K. Strimmer (2006a,b).
-   This approach derives from a FDA perspective. Essentially, it takes account 
-   of the distances between the various time points by introducing weights.
+   follow the definition of Opgen-Rhein and Strimmer (2006a,b).
+   This approach is derived from a FDA perspective. Essentially, it takes account 
+   of the distances between the various time points by assigning weights to samples.
    If these weights are all equal the usual iid estimators are obtained.
   
    For details about the analytic shrinkage procedure consult 
-   Opgen-Rhein and K. Strimmer (2006b) and  Schaefer and Strimmer (2005)
+   Opgen-Rhein and Strimmer (2006b) and  Sch\"afer and Strimmer (2005)
    as well as the help page of \code{\link[corpcor]{cov.shrink}}.
    
 }
@@ -63,8 +61,8 @@ dyn.pcor(x, lambda, protect=0, verbose=TRUE)
   \code{dyn.pcor} returns the partial dynamical correlation matrix.  
 }
 \author{
-  Rainer Opgen-Rhein (\url{http://opgen-rhein.de}) and
-  Korbinian Strimmer (\url{http://www.strimmerlab.org}).
+  Rainer Opgen-Rhein and
+  Korbinian Strimmer (\url{http://strimmerlab.org}).
 }
 \references{
 

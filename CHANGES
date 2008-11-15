@@ -1,0 +1,50 @@
+
+
+		CHANGES IN longitudinal VERSION 1.1.4
+
+- changes to make "longitudinal" work with corpcor version 1.4.8
+- bug fixed in dyn.scale()
+
+
+		CHANGES IN longitudinal VERSION 1.1.3
+
+- set everywhere the option "protect=0"
+- dyn.var() function now also has the "protect" argument
+
+
+
+		CHANGES IN longitudinal VERSION 1.1.2
+
+- "protect" field added, to control protected shrinkage
+  similar as in corpcor package
+- new functions: dyn.pvar(), dyn.var()
+- removed: dyn.pcov()
+- change of function name: is.regularily.sampled() is now called
+                           is.regularly.sampled()
+- now depends on version 1.4.2 of corpcor package
+
+
+
+		CHANGES IN longitudinal VERSION 1.1.1
+
+- documentation was updated
+
+
+
+		CHANGES IN longitudinal VERSION 1.1.0
+
+- now requires corpcor version1.3.0  (variance are shrunken as well)
+- changes were made to incorporate "lambda.var" parameter
+
+
+
+		CHANGES IN longitudinal VERSION 1.0.0
+
+- functions for dynamical correlation and covariance added
+- dynamical scale function
+
+
+
+Prior to version 1.0.0:
+
+- longitudional data structure was part of GeneTS package

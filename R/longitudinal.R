@@ -10,7 +10,7 @@
 ###
 ### This file is part of the `GeneTS' library for R and related languages.
 ### It is made available under the terms of the GNU General Public
-### License, version 2, or at your option, any later version,
+### License, version 3, or at your option, any later version,
 ### incorporated herein by reference.
 ### 
 ### This program is distributed in the hope that it will be
@@ -32,7 +32,7 @@
 
 ## basic functions
 
-is.longitudinal <- function(x)
+is.longitudinal = function(x)
 {
   if(inherits(x, "longitudinal")) 
     return(TRUE)
@@ -41,7 +41,7 @@ is.longitudinal <- function(x)
 }
 
 
-as.longitudinal <- function(x, repeats=1, time)
+as.longitudinal = function(x, repeats=1, time)
 { 
    if (!is.matrix(x) )
     stop("only matrices can be coerced to longitudinal")
@@ -52,13 +52,13 @@ as.longitudinal <- function(x, repeats=1, time)
   {
     if (dim(x)[1] %% repeats != 0)
       stop("number of repeats incompatible with number of rows of data matrix")
-    repeats <- rep(repeats, dim(x)[1] %/% repeats) 
+    repeats = rep(repeats, dim(x)[1] %/% repeats) 
   } 
   if (sum(repeats) != dim(x)[1])
     stop("sum of repeats must equal the number of rows in data matrix")
 
   # create time vector  
-  if (missing(time)) time <- 1:length(repeats)
+  if (missing(time)) time = 1:length(repeats)
   if (any(duplicated(time))) 
     stop("duplicated entries in time vector") 
   if (length(time) != length(repeats))
@@ -68,16 +68,16 @@ as.longitudinal <- function(x, repeats=1, time)
   
  
   # construct longitudinal object
-  attr(x, "class") <- "longitudinal"
-  attr(x, "time") <- time
-  attr(x, "repeats") <- repeats
+  attr(x, "class") = "longitudinal"
+  attr(x, "time") = time
+  attr(x, "repeats") = repeats
   
-  rn <- NULL
+  rn = NULL
   for (i in 1:length(repeats))
   {
-    rn <- c(rn, paste( time[i], seq(1, repeats[i]), sep="-") )
+    rn = c(rn, paste( time[i], seq(1, repeats[i]), sep="-") )
   }
-  rownames(x) <- rn
+  rownames(x) = rn
    
   return(x)
 }
@@ -87,14 +87,14 @@ as.longitudinal <- function(x, repeats=1, time)
 
 ## basic output stuff
 
-summary.longitudinal <- function(object, ...)
+summary.longitudinal = function(object, ...)
 {
-  x <- object
+  x = object
   
   if (has.repeated.measurements(x))
-     tmp <- "yes"
+     tmp = "yes"
   else
-      tmp <- "none"
+      tmp = "none"
   
   cat("Longitudinal data:\n ")
   cat(paste(dim(x)[2], "variables measured at",
@@ -109,38 +109,38 @@ summary.longitudinal <- function(object, ...)
 
 }
 
-print.longitudinal <- function(x, ...)
+print.longitudinal = function(x, ...)
 {
   summary(x)
   cat("\n")
    
-  attr(x, "class") <- attr(x, "time") <- attr(x, "repeats") <- NULL
+  attr(x, "class") = attr(x, "time") = attr(x, "repeats") = NULL
 
   NextMethod("print", x, quote = FALSE, right = TRUE)
 }
 
-plot.longitudinal <- function(x, series=1, type=c("median", "mean"), autolayout=TRUE, ...)
+plot.longitudinal = function(x, series=1, type=c("median", "mean"), autolayout=TRUE, ...)
 {
    type=match.arg(type)
    if (type=="median") func=median
    if (type=="mean") func=mean
 
    
-   cx <- condense.longitudinal(x, series, func)
-   lc <- length(series)
-   tr <- get.time.repeats(x)
+   cx = condense.longitudinal(x, series, func)
+   lc = length(series)
+   tr = get.time.repeats(x)
    
-   nrow <- ceiling(sqrt(lc))
-   ncol <- ceiling(lc/nrow)
+   nrow = ceiling(sqrt(lc))
+   ncol = ceiling(lc/nrow)
    
    if(autolayout) par(mfrow=c(nrow,ncol))
    
-   xx <- rep(tr$time, tr$repeats)
+   xx = rep(tr$time, tr$repeats)
    for (i in 1:lc)
    {
-     name <- colnames(x)[series[i]]
+     name = colnames(x)[series[i]]
      if(is.null(name))
-       name <- paste("Series", series[i])
+       name = paste("Series", series[i])
      plot(xx, x[,series[i]], main=name, ylab="value", xlab="time", col=gray(0.7), ...)
      lines(tr$time, cx[,i], col=4)
    }
