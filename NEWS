@@ -1,4 +1,9 @@
 
+		CHANGES IN longitudinal VERSION 1.1.5
+
+- small correction to make package pass the tests of R version 2.10
+- now corpcor version 1.5.3 is required (also needed for R 2.10)
+
 
 		CHANGES IN longitudinal VERSION 1.1.4
 

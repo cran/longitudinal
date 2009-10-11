@@ -66,7 +66,7 @@
 }
 
 
-\seealso{\code{\link[corpcor]{weighted.scale}}.}
+\seealso{\code{\link[corpcor]{wt.scale}}.}
 
 \examples{
 # load "longitudinal" library
