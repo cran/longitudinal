@@ -1,4 +1,9 @@
 
+		CHANGES IN longitudinal VERSION 1.1.6
+
+- small correction to make package pass the tests of R version 2.13
+
+
 		CHANGES IN longitudinal VERSION 1.1.5
 
 - small correction to make package pass the tests of R version 2.10
