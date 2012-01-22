@@ -1,0 +1,16 @@
+ad4652e2dcfd4a0ecf91a2c01a7defd5 *COPYING
+f58842903f2b59509b508f78edc84b82 *DESCRIPTION
+bf6508276a9afcd87da95a1a88b03e3a *NAMESPACE
+93bb8be3f8a6e3303e390438a9a57bfb *NEWS
+028a8a0754914552ad0b501acaab4d26 *R/dyn.cor.R
+6ca64d78a25e455314bfeff9eb5a413a *R/dyn.scale.R
+84c6d18e08d3238e56274c117cab2ca3 *R/longitudinal.R
+6461945416a7bfc322885859120542cf *R/longitudinal.util.R
+5d7a63150ee0c9b260f6a88b8b65601c *data/tcell.rda
+471dbe8685fd5334f753f6f1ce944d02 *man/dyn.cor.Rd
+63f80d9b6f9ef7710a0fd04295ce7f9e *man/dyn.scale.Rd
+63dedf15d74a8ced4ba46183eb2c3c8c *man/longitudinal-internal.Rd
+e75c0ff0496efc94eba0d448d08a76e6 *man/longitudinal.Rd
+f4da7a2522f23b4464a7a7d182874f1e *man/longitudinal.package.Rd
+15007b9a0c6cc922376b4ae8aec17df5 *man/longitudinal.util.Rd
+3e73e61229f63c32d3f39d9dd32be099 *man/tcell.Rd

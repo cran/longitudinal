@@ -1,3 +1,12 @@
+ 
+              VERSION HISTORY of "longitudinal" PACKAGE
+
+
+
+		CHANGES IN longitudinal VERSION 1.1.7
+
+- NAMESPACE file added
+
 
 		CHANGES IN longitudinal VERSION 1.1.6
 
@@ -22,7 +31,6 @@
 - dyn.var() function now also has the "protect" argument
 
 
-
 		CHANGES IN longitudinal VERSION 1.1.2
 
 - "protect" field added, to control protected shrinkage
@@ -34,18 +42,15 @@
 - now depends on version 1.4.2 of corpcor package
 
 
-
 		CHANGES IN longitudinal VERSION 1.1.1
 
 - documentation was updated
-
 
 
 		CHANGES IN longitudinal VERSION 1.1.0
 
 - now requires corpcor version1.3.0  (variance are shrunken as well)
 - changes were made to incorporate "lambda.var" parameter
-
 
 
 		CHANGES IN longitudinal VERSION 1.0.0
