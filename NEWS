@@ -3,6 +3,12 @@
 
 
 
+		CHANGES IN longitudinal VERSION 1.1.8
+
+- updated dependencies R >= 2.15.1, corpcor >= 1.6.6
+- Licence file removed to avoid warnings in R-devel
+
+
 		CHANGES IN longitudinal VERSION 1.1.7
 
 - NAMESPACE file added
