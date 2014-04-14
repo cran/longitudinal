@@ -22,3 +22,6 @@ export(
 "summary.longitudinal",
 "time2weights"
 )
+import(
+"corpcor"
+)
