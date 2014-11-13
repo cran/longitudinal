@@ -2,6 +2,11 @@
               VERSION HISTORY of "longitudinal" PACKAGE
 
 
+		CHANGES IN longitudinal VERSION 1.1.10
+
+- change of maintainer email address.
+
+
 		CHANGES IN longitudinal VERSION 1.1.9
 
 - updated to get rid of "import" warning in R 3.1.0
