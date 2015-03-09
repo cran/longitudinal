@@ -2,6 +2,13 @@
               VERSION HISTORY of "longitudinal" PACKAGE
 
 
+
+		CHANGES IN longitudinal VERSION 1.1.11
+
+- fixed broken URLs in documentation.
+- fix "S3 generic/method consistency" NOTE raised by R-devel.
+
+
 		CHANGES IN longitudinal VERSION 1.1.10
 
 - change of maintainer email address.

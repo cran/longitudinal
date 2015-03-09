@@ -22,6 +22,9 @@ export(
 "summary.longitudinal",
 "time2weights"
 )
+S3method("plot", "longitudinal")
+S3method("print", "longitudinal")
+S3method("summary", "longitudinal")
 import(
 "corpcor"
 )

@@ -33,11 +33,7 @@ data(tcell)
 }
 
 \source{
-  This data is described in Rangel et al. (2004) and can be freely
-  downloaded from 
-  \url{http://public.kgi.edu/~wild/LDS/index.htm}. The \code{tcell}
-  object contains the log-transformed and quantile normalized data
-  (\url{http://public.kgi.edu/~wild/LDS/Bioinformatics_data.xls}).
+  This data is described in Rangel et al. (2004).
 }
 
 
