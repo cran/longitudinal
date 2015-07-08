@@ -2,6 +2,10 @@
               VERSION HISTORY of "longitudinal" PACKAGE
 
 
+		CHANGES IN longitudinal VERSION 1.1.12
+
+- added import statements as required by R-devel.
+
 
 		CHANGES IN longitudinal VERSION 1.1.11
 

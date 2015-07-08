@@ -25,6 +25,8 @@ export(
 S3method("plot", "longitudinal")
 S3method("print", "longitudinal")
 S3method("summary", "longitudinal")
-import(
-"corpcor"
-)
+import("corpcor")
+import("graphics")
+import("grDevices")
+import("stats")
+
