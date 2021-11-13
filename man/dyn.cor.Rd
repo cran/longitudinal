@@ -62,24 +62,25 @@ dyn.pcor(x, lambda, verbose=TRUE)
 }
 \author{
   Rainer Opgen-Rhein and
-  Korbinian Strimmer (\url{http://strimmerlab.org}).
+  Korbinian Strimmer (\url{https://strimmerlab.github.io}).
 }
 \references{
 
  Opgen-Rhein, R., and K. Strimmer. 2006a. Inferring gene dependency networks from 
  genomic longitudinal data: a functional data approach.
- REVSTAT \bold{4}:53-65. (\url{http://www.ine.pt/revstat/pdf/rs060103.pdf}) 
+ REVSTAT \bold{4}:53-65.
 
  Opgen-Rhein, R., and K. Strimmer. 2006b. Using regularized dynamic correlation 
  to infer gene dependency networks from time-series microarray data. 
  The 4th International Workshop on Computational Systems Biology,
  WCSB 2006 (June 12-13, 2006, Tampere, Finland). 
- (\url{http://www.cs.tut.fi/wcsb06/})  
   
  Schaefer, J., and Strimmer, K. (2005).  A shrinkage approach to large-scale
  covariance estimation and implications for functional genomics. 
  Statist. Appl. Genet. Mol. Biol. \bold{4}:32.
- (\url{http://www.bepress.com/sagmb/vol4/iss1/art32/})  
+ <DOI:10.2202/1544-6115.1175>
+
+
 }
 \seealso{\code{\link{dyn.weights}}, \code{\link[corpcor]{cov.shrink}}, \code{\link[corpcor]{pcor.shrink}}}
 

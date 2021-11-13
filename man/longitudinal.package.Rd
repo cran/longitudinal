@@ -11,9 +11,9 @@
   and dynamical covariance.
 }
 
-\author{Rainer Opgen-Rhein and Korbinian Strimmer (\url{http://strimmerlab.org/})}
+\author{Rainer Opgen-Rhein and Korbinian Strimmer (\url{https://strimmerlab.github.io/})}
 \references{
-  See website: \url{http://strimmerlab.org/software/longitudinal/}
+  See website: \url{https://strimmerlab.github.io/software/longitudinal/}
 }
 \keyword{univar}
 \seealso{

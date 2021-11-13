@@ -49,20 +49,19 @@
 
 \author{
   Rainer Opgen-Rhein and
-  Korbinian Strimmer (\url{http://strimmerlab.org}).
+  Korbinian Strimmer (\url{https://strimmerlab.github.io}).
 }
 
 \references{
 
  Opgen-Rhein, R., and K. Strimmer. 2006a. Inferring gene dependency networks from 
  genomic longitudinal data: a functional data approach.
- REVSTAT \bold{4}:53-65. (\url{http://www.ine.pt/revstat/pdf/rs060103.pdf})  
+ REVSTAT \bold{4}:53-65.  
 
  Opgen-Rhein, R., and K. Strimmer. 2006b. Using regularized dynamic correlation 
  to infer gene dependency networks from time-series microarray data. 
  The 4th International Workshop on Computational Systems Biology,
  WCSB 2006 (June 12-13, 2006, Tampere, Finland). 
- (\url{http://www.cs.tut.fi/wcsb06/})  
 }
 
 

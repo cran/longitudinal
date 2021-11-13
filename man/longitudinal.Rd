@@ -71,7 +71,7 @@ is.longitudinal(x)
 
 
 \author{
-  Korbinian Strimmer (\url{http://strimmerlab.org}).
+  Korbinian Strimmer (\url{https://strimmerlab.github.io}).
 }
 \seealso{\code{\link{longitudinal.util}}, \code{\link{tcell}}, \code{\link{ts}}.}
 
